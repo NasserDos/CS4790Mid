@@ -1,0 +1,46 @@
+﻿@model IEnumerable<CS4790Mid.Models.Transaction>
+
+<div class="btn">
+    @Html.ActionLink("Add a New Transaction", "CreateTrans", 
+     new { id = Model.ToList()[0].custID }) 
+</div>
+
+<table class="table trans">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.transDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.transDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.transAmt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.custID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.transDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.transDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.transAmt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.custID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.transID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.transID })
+        </td>
+    </tr>
+}
+
+</table>

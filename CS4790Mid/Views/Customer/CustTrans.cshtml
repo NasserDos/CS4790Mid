@@ -1,0 +1,56 @@
+﻿@model CS4790Mid.Models.CustomerTransactionsViewModel
+
+@{
+    ViewBag.Title = "CustTrans";
+}
+
+
+<h2>CustTrans</h2>
+
+<div class="cust">
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.emailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer.emailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.lastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer.lastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.Balance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer.Balance)
+        </dd>
+
+    </dl>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.customer.custID }) 
+    </p>
+</div>
+
+
+<div>
+
+    @Html.Partial("_TransForCustomer",Model.transactions)
+</div>

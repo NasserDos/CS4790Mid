@@ -1,0 +1,50 @@
+﻿@model CS4790Mid.Models.Transaction
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transaction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.transDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.transDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.transDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.transDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.transAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.transAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.custID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.custID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.transID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
