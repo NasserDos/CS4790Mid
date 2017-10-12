@@ -5,6 +5,7 @@ using System.Web;
 
 namespace CS4790Mid.Models
 {
+    //would finish this if it was relevant to what I was doing at the time
     public class CreditCardRepository
     {
         public static List<Customer> getAllCustomers()
